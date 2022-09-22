@@ -24,12 +24,19 @@ Newcastle University
 The framework is ready to use with very little modification. 
 Input format - you need to choose your input format and in the `main_framework.py` you need to specify the `data_info`. You also can change the `augment_style`.
 
-```data_process = Data_Pipeline(
+```python  
+data_process = Data_Pipeline(
         data_info=f"{Path.home()}/Data/small_dataset",
         augment_style="flip",
         BATCHSIZE=28,
-    )'''
+    )
+```
     
 `data_info` is depending on data type used. For `image_download`, `data_info` can be MNIST or fashion_mnist or any image dataset that can be downloaded from Pytorch. For `image_folder`, `data_info` is the path to the the image folder. For `numpy_image`, `data_info` is the path to the the numpy files.
 
-The import in `data_pipeline` need to be changed accordingly. Use `from image_folder import Image_Folder` for image folder, `from image_download import Image_Download` and `from numpy_image import Numpy_Image`.
+The import in `data_pipeline` need to be changed accordingly. 
+Use `from image_folder import Image_Folder` for the image folders, 
+`from image_download import Image_Download` for the downloaded images and 
+`from numpy_image import Numpy_Image` for the numpy files.
+
+The `nas_pipeline` can be modified to add your own version of NAS by importing the NAS python file instead of `nas_search`.
