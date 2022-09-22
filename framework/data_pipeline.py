@@ -5,7 +5,7 @@ import json
 import torch
 from torchvision import datasets
 from torchvision.transforms.transforms import Compose
-from image_folder import Image_Folder
+from image_download import Image_Data
 
 
 class Data_Pipeline:
@@ -77,7 +77,7 @@ class Data_Pipeline:
             test_loader,
             n_classes,
             n_in,
-        ) = Image_Folder.get_data(
+        ) = Image_Data.get_data(
             self.data_info, self.batchsize, train_transforms, test_transforms
         )
 

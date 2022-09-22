@@ -18,11 +18,8 @@ if __name__ == "__main__":
     print("  Estimated time left:", show_time(runclock.check()))
 
     data_process = Data_Pipeline(
-        # data_style = "image_folder",
         data_info="FashionMNIST",
         augment_style="flip",
-        # data_path=f"{Path.home()}/Data/small_dataset",
-        # data_path="",
         BATCHSIZE=28,
     )
 

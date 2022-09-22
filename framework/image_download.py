@@ -3,7 +3,7 @@ from torchvision import datasets
 import os
 
 
-class Image_Download:
+class Image_Data:
     def __init__(self):
         pass
 
