@@ -28,4 +28,8 @@ Input format - you need to choose your input format and in the `main_framework.p
         data_info=f"{Path.home()}/Data/small_dataset",
         augment_style="flip",
         BATCHSIZE=28,
-    )```
+    )
+    
+`data_info` is depending on data type used. For `image_download`, `data_info` can be MNIST or fashion_mnist or any image dataset that can be downloaded from Pytorch. For `image_folder`, `data_info` is the path to the the image folder. For `numpy_image`, `data_info` is the path to the the numpy files.
+
+The import in `data_pipeline` need to be changed accordingly. Use `from image_folder import Image_Folder` for image folder, `from image_download import Image_Download` and `from numpy_image import Numpy_Image`.
