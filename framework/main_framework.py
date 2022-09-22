@@ -18,7 +18,7 @@ if __name__ == "__main__":
     print("  Estimated time left:", show_time(runclock.check()))
 
     data_process = Data_Pipeline(
-        data_info="FashionMNIST",
+        data_info=f"{Path.home()}/Data/small_dataset",
         augment_style="flip",
         BATCHSIZE=28,
     )
@@ -35,10 +35,7 @@ if __name__ == "__main__":
 
     print("=== Training ===")
     print("  Estimated time left:", show_time(runclock.check()))
-    # train = Train_pipeline(model, data_process.train_loader, data_process.valid_loader)
     train = Train_pipeline(model, data_process.train_loader, data_process.valid_loader)
-
-    # trained_model = train.train
 
     print("=== Predicting ===")
     print("  Estimated time left:", show_time(runclock.check()))
