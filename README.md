@@ -15,7 +15,17 @@ RSE Team
 Newcastle University  
 ([nik.nik-aznan@newcastle.ac.uk](mailto:nik.nik-aznan@newcastle.ac.uk))  
 
-## Built With
+### Built With
 
 [Python=3.10.7](https://something.com)  
 [Pytorch=1.12.1](https://pytorch.org)  
+
+### How to use
+The framework is ready to use with very little modification. 
+Input format - you need to choose your input format and in the `main_framework.py` you need to specify the `data_info`. You also can change the `augment_style`.
+
+```data_process = Data_Pipeline(
+        data_info=f"{Path.home()}/Data/small_dataset",
+        augment_style="flip",
+        BATCHSIZE=28,
+    )```
