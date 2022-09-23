@@ -5,7 +5,7 @@ import json
 import torch
 from torchvision import datasets
 from torchvision.transforms.transforms import Compose
-from image_folder import Image_Data
+from numpy_image import Image_Data
 
 
 class Data_Pipeline:

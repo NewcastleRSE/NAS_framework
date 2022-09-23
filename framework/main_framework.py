@@ -18,7 +18,7 @@ if __name__ == "__main__":
     print("  Estimated time left:", show_time(runclock.check()))
 
     data_process = Data_Pipeline(
-        data_info=f"{Path.home()}/Data/small_dataset",
+        data_info=f"{Path.home()}/Data/NAS/Nas_data/devel_dataset_0",
         augment_style="flip",
         BATCHSIZE=28,
     )
