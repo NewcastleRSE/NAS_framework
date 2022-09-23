@@ -35,8 +35,8 @@ data_process = Data_Pipeline(
 `data_info` is depending on data type used. For `image_download`, `data_info` can be MNIST or fashion_mnist or any image dataset that can be downloaded from Pytorch. For `image_folder`, `data_info` is the path to the the image folder. For `numpy_image`, `data_info` is the path to the the numpy files.
 
 The import in `data_pipeline` need to be changed accordingly. 
-Use `from image_folder import Image_Folder` for the image folders, 
-`from image_download import Image_Download` for the downloaded images and 
-`from numpy_image import Numpy_Image` for the numpy files.
+Use `from image_folder import Image_Data` for the image folders, 
+`from image_download import Image_Data` for the downloaded images and 
+`from numpy_image import Numpy_Data` for the numpy files.
 
 The `nas_pipeline` can be modified to add your own version of NAS by importing the NAS python file instead of `nas_search`.
