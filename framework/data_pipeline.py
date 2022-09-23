@@ -1,9 +1,4 @@
 from torchvision import transforms
-import numpy as np
-import os
-import json
-import torch
-from torchvision import datasets
 from torchvision.transforms.transforms import Compose
 from numpy_image import Image_Data
 
@@ -38,23 +33,6 @@ class Data_Pipeline:
         # # colorjitter.probability = 0.9
         # shear = transforms.RandomAffine(degrees=0, translate=None, scale=None, shear=20) # 20 degrees random shear
         # # greyscale = transforms.RandomGrayscale(p=1.0) # make everything greyscale
-
-        # # class RandomErasing(object):
-        # #     def __init__(self,probability,area_ratio):
-        # #         self.probability = probability
-        # #         self.area_ratio = area_ratio
-        # #     def __call__(self,x):
-        # #         if random.random() < self.probability:
-        # #             h = int((random.random()+0.5) * (self.area_ratio*1024**2)**0.5)
-        # #             w = int(self.area_ratio*(1024**2) / h)
-        # #             x0 = int(random.random()*(1023-w))
-        # #             y0 = int(random.random()*(1023-h))
-        # #             x[:,y0:y0+h,x0:x0+w] = torch.randn(3,h,w)
-        # #         return x
-        # # def addVirtualNoise(x, value=0.0000001):
-        # #     noise = torch.randn(*(x.shape))* value
-        # #     return x + noise.to(device)
-        # # randomErasing = RandomErasing(0.5, 0.1)
 
         if augment_style == "default":
             train_transforms = transforms.Compose([resize, tensor_transform])
